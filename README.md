@@ -6,6 +6,13 @@
 
 ```
 install rbenv
+gem update --system
+sudo gem install bundler
+brew install rbenv ruby-build
+brew services restart php
+brew upgrade
+rbenv install 3.0.0\nrbenv local 3.0.0
+bin/rails db:migrate RAILS_ENV=development
 ```
 
 # Capstone requirements/Project details at the bottom
