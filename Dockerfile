@@ -21,3 +21,9 @@ COPY . .
 
 EXPOSE 3000
 CMD ["bundle", "exec", "rails", "server" , "-b", "0.0.0.0"]
+
+# multi container build 
+# most likely to change goes on top
+# line 12 is copying line 1 
+# line 3 and 13 are relative files and will be in the same dir
+# quad 0 goes into every user interface not just local 
