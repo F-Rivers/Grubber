@@ -17,13 +17,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: <%= ENV['GRUBBER_APP_DATABASE_LOCATION'] %>  # <-- change this line
+  port: 5432
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: <%= ENV['GRUBBER_APP_DATABASE'] %>
+  username: <%= ENV['GRUBBER_APP_DATABASE_USERNAME'] %>
+  password: <%= ENV['GRUBBER_APP_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
-  database: grubber_app_development
+  database: <%= ENV['GRUBBER_APP_DATABASE'] %>
+  username: <%= ENV['GRUBBER_APP_DATABASE_USERNAME'] %>
+  password: <%= ENV['GRUBBER_APP_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

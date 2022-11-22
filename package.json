@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "devdb": "docker-compose -f compose.devdb.yaml up",
+    "start": "RAILS_ENV=development bundle exec rails s",
+    "dUp":  "docker-compose -f compose.grubber.yaml up",
+    "dBuild": "docker-compose -f compose.grubber.yaml up --build"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
     "@rails/activestorage": "^7.0.3-1",

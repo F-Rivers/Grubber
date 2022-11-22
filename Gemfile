@@ -12,6 +12,9 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Use .env file to manage environment variables.
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 

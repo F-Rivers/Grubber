@@ -37,3 +37,7 @@
 yarn-debug.log*
 .yarn-integrity
 .env
+
+# Don't check in credentials 
+config/env.yml
+.env*

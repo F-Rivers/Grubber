@@ -96,6 +96,10 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     digest (3.1.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
@@ -276,6 +280,7 @@ DEPENDENCIES
   bootstrap (~> 5.1)
   debug
   devise (~> 4.8)
+  dotenv-rails
   httparty
   importmap-rails
   jbuilder

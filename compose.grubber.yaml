@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+    grubber:
+        env_file:
+            - .env
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        environment:
+            POSTGRES_USER: "${GRUBBER_APP_DATABASE_USERNAME}"
+            POSTGRES_PASSWORD: "${GRUBBER_APP_DATABASE_PASSWORD}"
+        ports:
+            - 3000:3000
+        # command: "bundle exec rails server"
+networks:
+    default:
+        external:
+            name: "${DOCKER_NETWORK}"
