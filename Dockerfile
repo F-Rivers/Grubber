@@ -11,6 +11,7 @@ RUN bundle config --global frozen 1
 WORKDIR /usr/src/app
 COPY --from=installNode /app/node_modules ./node_modules
 COPY Gemfile Gemfile.lock ./
+RUN gem install bundler
 RUN apt install libpq-dev
 RUN gem install pg -v '1.4.1'
 RUN apt update
@@ -27,3 +28,12 @@ CMD ["bundle", "exec", "rails", "server" , "-b", "0.0.0.0"]
 # line 12 is copying line 1 
 # line 3 and 13 are relative files and will be in the same dir
 # quad 0 goes into every user interface not just local 
+
+# run command docker network create dev 
+## creates two images: postgres and adminer
+## visible by runninng docker network ls 
+
+# run commands from .json 
+
+# Errors ----------------------------------
+# postgres -> LOG: invalid length of startup packet 
